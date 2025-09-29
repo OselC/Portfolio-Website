@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio - About</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    
+<header class="bg-gray-900 border-b-4 border-red-700">
+  <div class="max-w-6xl mx-auto pl-2 flex items-center justify-between h-16">
+    <h1 class="text-2xl font-bold tracking-widest text-white">Portfolio</h1>
+
+    <!-- desktop nav -->
+    <nav class="hidden md:flex space-x-8 text-white">
+      <a href="index.html" class="hover:text-red-400">Home</a>
+      <a href="about.html" class="hover:text-red-400">About</a>
+      <a href="projects.html" class="hover:text-red-400">Projects</a>
+      <a href="resume.html" class="hover:text-red-400">Resume</a>
+      <a href="contact.html" class="hover:text-red-400">Contact</a>
+    </nav>
+
+        <!-- Hamburger (mobile only) -->
+        <button id="menu-btn" class="md:hidden text-white text-2xl" aria-label="Toggle menu">☰</button>
+      </div>
+
+      <!-- Mobile Nav -->
+      <div id="mobile-menu" class="hidden md:hidden bg-gray-800">
+        <ul class="flex flex-col space-y-2 px-6 py-4 text-white">
+          <li><a href="index.html" class="hover:text-red-400">Home</a></li>
+          <li><a href="about.html" class="hover:text-red-400">About</a></li>
+          <li><a href="projects.html" class="hover:text-red-400">Projects</a></li>
+          <li><a href="resume.html" class="hover:text-red-400">Resume</a></li>
+          <li><a href="contact.html" class="hover:text-red-400">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+</header>
+
+
+  <main>
+    <h2>About Me</h2>
+    <p>I’m a software engineer from Indonesia with experience in full-stack web development, machine learning, and UX-driven product design.</p>
+  </main>
+
+  <footer>
+    <p>© 2025 Osel Citta Chen — built with passion</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

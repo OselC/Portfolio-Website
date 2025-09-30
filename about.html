@@ -42,87 +42,82 @@
 </header>
 
   <main>
-    <section>
-      <!-- Profile Picture -->
-      <div class="flex-1">
-        <img src="images/profile.png" alt="profile picture">
-      </div>
+    <section class="max-w-6xl mx-auto px-6 py-16 md:py-32 flex flex-col md:flex-row items-center gap-8">
 
       <!-- About Me -->
-      <div class="flex-1">
+      <div class="flex-1 order-1 md:order-1">
       <h2 class="text-4xl font-bold mb-4 mt-8">About Me</h2>
-      <p class="text-lg mb-10">
+      <p class="text-lg mb-4 text-justify">
         I’m a software engineer from Indonesia with experience in full-stack web development, 
-        machine learning, and UX-driven product design. When I'm not coding, I usually enjoy hobbies 
+        machine learning, and UI/UX driven product design. When I'm not coding, I usually enjoy hobbies 
         like playing games and collecting trading cards.</p>
+      </div>
+
+      <!-- Profile Picture -->
+      <div class="flex-shrink-0 w-48 h-48 md:w-64 md:h-64 order-2 md:order-2 md:-mt-20 mb-10 md:mb-5">
+        <img src="images/profile.png" alt="profile picture">
       </div>
     </section>
     <!-- Skills -->
-    <section class="bg-gray-200 py-16">
-      <div>
-        <h2 class="text-4xl font-bold text-center mb-8">My Skills</h2>
-        <h2 class="text-3xl font-bold text-center mb-4">Programming</h2>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
-            <div class="bg-white p6 rounded-lg shadow text-center">
-              <p class="font-semibold text-lg">C/C++</p>
-            </div>
+    <section class="bg-red-700 py-16">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-4xl text-white font-bold text-center mb-12 -mt-10">My Skills</h2>
 
-            <div class="bg-white p6 rounded-lg shadow text-center">
-              <p class="font-semibold text-lg">Python</p>
-            </div>
-
-            <div class="bg-white p6 rounded-lg shadow text-center">
-              <p class="font-semibold text-lg">Java</p>
-            </div>
-
-            <div class="bg-white p6 rounded-lg shadow text-center">
-              <p class="font-semibold text-lg">SQL</p>
-            </div>
-
+        <!-- Programming -->
+        <h3 class="text-3xl text-white font-bold text-center mb-2">Programming</h3>
+        <div class="flex flex-wrap justify-center gap-6 mb-10">
+          <div class="bg-white p-6 rounded-none shadow-md text-center w-40 border-2 border-black font-pixel">
+            <p class="font-semibold text-lg">C/C++</p>
           </div>
-
-          <h2 class="text-3xl font-bold text-center mb-4">Web Development</h2>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
-            <div class="bg-white p6 rounded-lg shadow text-center">
-              <p class="font-semibold text-lg">HTML</p>
-            </div>
-
-            <div class="bg-white p6 rounded-lg shadow text-center">
-              <p class="font-semibold text-lg">CSS</p>
-            </div>
-
-            <div class="bg-white p6 rounded-lg shadow text-center">
-              <p class="font-semibold text-lg">Javascript</p>
-            </div>
-
-            <div class="bg-white p6 rounded-lg shadow text-center">
-              <p class="font-semibold text-lg">PHP</p>
-            </div>
-
+          <div class="bg-white p-6 rounded-none shadow-md text-center w-40 border-2 border-black font-pixel">
+            <p class="font-semibold text-lg">Python</p>
           </div>
-
-          <h2 class="text-3xl font-bold text-center mb-4">Mobile App Development</h2>
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
-            <div class="bg-white p6 rounded-lg shadow text-center">
-              <p class="font-semibold text-lg">React Native</p>
-            </div>
-
+          <div class="bg-white p-6 rounded-none shadow-md text-center w-40 border-2 border-black font-pixel">
+            <p class="font-semibold text-lg">Java</p>
           </div>
-
-          <h2 class="text-3xl font-bold text-center mb-4">AI Programming</h2>
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
-            <div class="bg-white p6 rounded-lg shadow text-center">
-              <p class="font-semibold text-lg">Machine Learning</p>
-            </div>
-
-            <div class="bg-white p6 rounded-lg shadow text-center">
-              <p class="font-semibold text-lg">Deep Learning</p>
-            </div>
+          <div class="bg-white p-6 rounded-none shadow-md text-center w-40 border-2 border-black font-pixel">
+            <p class="font-semibold text-lg">SQL</p>
           </div>
+        </div>
 
+        <!-- Web Development -->
+        <h3 class="text-3xl text-white font-bold text-center mb-2">Web Development</h3>
+        <div class="flex flex-wrap justify-center gap-6 mb-10">
+          <div class="bg-white p-6 rounded-none shadow-md text-center w-40 border-2 border-black font-pixel">
+            <p class="font-semibold text-lg">HTML</p>
+          </div>
+          <div class="bg-white p-6 rounded-none shadow-md text-center w-40 border-2 border-black font-pixel">
+            <p class="font-semibold text-lg">CSS</p>
+          </div>
+          <div class="bg-white p-6 rounded-none shadow-md text-center w-40 border-2 border-black font-pixel">
+            <p class="font-semibold text-lg">Javascript</p>
+          </div>
+          <div class="bg-white p-6 rounded-none shadow-md text-center w-40 border-2 border-black font-pixel">
+            <p class="font-semibold text-lg">PHP</p>
+          </div>
+        </div>
+
+        <!-- Mobile App Development -->
+        <h3 class="text-3xl text-white font-bold text-center mb-2">Mobile App Development</h3>
+        <div class="flex flex-wrap justify-center gap-6 mb-10">
+          <div class="bg-white p-6 rounded-none shadow-md text-center w-40 border-2 border-black font-pixel">
+            <p class="font-semibold text-lg">React Native</p>
+          </div>
+        </div>
+
+        <!-- AI Programming -->
+        <h3 class="text-3xl text-white font-bold text-center mb-2">AI Programming</h3>
+        <div class="flex flex-wrap justify-center gap-6 mb-6">
+          <div class="bg-white p-6 rounded-none shadow-md text-center w-40 border-2 border-black font-pixel">
+            <p class="font-semibold text-lg">Machine Learning</p>
+          </div>
+          <div class="bg-white p-6 rounded-none shadow-md text-center w-40 border-2 border-black font-pixel">
+            <p class="font-semibold text-lg">Deep Learning</p>
+          </div>
         </div>
       </div>
     </section>
+
   </main>
 
   <footer class="bg-gray-900 text-white text-center py-4">

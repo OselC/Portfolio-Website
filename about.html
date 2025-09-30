@@ -3,12 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio - About</title>
+  <title>About Me</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-    
+
 <header class="bg-gray-900 border-b-4 border-red-700">
   <div class="max-w-6xl mx-auto pl-2 flex items-center justify-between h-16">
     <h1 class="text-2xl font-bold tracking-widest text-white">Portfolio</h1>
@@ -39,14 +41,67 @@
     </div>
 </header>
 
-
   <main>
-    <h2>About Me</h2>
-    <p>I’m a software engineer from Indonesia with experience in full-stack web development, machine learning, and UX-driven product design.</p>
+    <section>
+      <!-- Profile Picture -->
+      <div class="flex-1">
+        <img src="images/profile.png" alt="profile picture">
+      </div>
+
+      <!-- About Me -->
+      <div class="flex-1">
+      <h2 class="text-4xl font-bold mb-4 mt-8">About Me</h2>
+      <p class="text-lg mb-10">
+        I’m a software engineer from Indonesia with experience in full-stack web development, 
+        machine learning, and UX-driven product design. When I'm not coding, I usually enjoy hobbies 
+        like playing games and collecting trading cards.</p>
+      </div>
+    </section>
+    <!-- Skills -->
+    <section class="bg-gray-200 py-16">
+      <div>
+        <h2 class="text-4xl font-bold text-center mb-8">My Skills</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div class="bg-white p6 rounded-lg shadow text-center">
+              <p class="font-semibold text-lg">C/C++</p>
+            </div>
+
+            <div class="bg-white p6 rounded-lg shadow text-center">
+              <p class="font-semibold text-lg">Python</p>
+            </div>
+
+            <div class="bg-white p6 rounded-lg shadow text-center">
+              <p class="font-semibold text-lg">Java</p>
+            </div>
+
+            <div class="bg-white p6 rounded-lg shadow text-center">
+              <p class="font-semibold text-lg">SQL</p>
+            </div>
+            
+            <div class="bg-white p6 rounded-lg shadow text-center">
+              <p class="font-semibold text-lg">HTML</p>
+            </div>
+
+            <div class="bg-white p6 rounded-lg shadow text-center">
+              <p class="font-semibold text-lg">CSS</p>
+            </div>
+
+            <div class="bg-white p6 rounded-lg shadow text-center">
+              <p class="font-semibold text-lg">Javascript</p>
+            </div>
+
+            <div class="bg-white p6 rounded-lg shadow text-center">
+              <p class="font-semibold text-lg">PHP</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <footer>
-    <p>© 2025 Osel Citta Chen — built with passion</p>
+  <footer class="bg-gray-900 text-white text-center py-4">
+    <p>Osel Citta Chen — Computer Science</p>
   </footer>
 
   <script src="script.js"></script>

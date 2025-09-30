@@ -40,17 +40,83 @@
 </header>
 
 
-  <main>
-    <h2>Projects</h2>
-    <ul>
-      <li>AI-Powered Crop Deficiency Detector</li>
-      <li>YouTube Views Prediction</li>
-      <li>UnemployedCSStudents — Career Platform</li>
-    </ul>
-  </main>
+<main class="py-12 bg-gray-300">
+  <h2 class="text-4xl font-bold text-center mb-8">My Projects</h2>
 
-  <footer>
-    <p>© 2025 Osel Citta Chen — built with passion</p>
+  <!-- Carousel container -->
+  <div class="relative max-w-4xl mx-auto">
+
+    <!-- Slides -->
+    <div class="overflow-hidden rounded-lg shadow-2xl">
+      <div id="carousel" class="flex transition-transform duration-500">
+        
+        <!-- Slide 1 -->
+        <div class="w-full flex-shrink-0 p-8 bg-white text-center">
+          <h3 class="text-2xl font-bold mb-4">AI-Powered Crop Deficiency Detector</h3>
+          <!-- <img src="images/Asgore.jpg" alt="Crop Detector" class="mx-auto mb-2 w-42 h-32"> -->
+          <p class="text-gray-600">A CNN model that identifies crop nutrient deficiencies from leaf images.</p>
+          <a href="https://github.com/yourusername/crop-deficiency-detector" target="_blank"
+            class="inline-block bg-gray-800 text-white mt-10 
+            md:px-8 md:py-4 px-6 py-2
+            text-xl rounded-lg hover:bg-gray-600 transition">
+            View on GitHub
+          </a>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="w-full flex-shrink-0 p-8 bg-white text-center">
+          <h3 class="text-2xl font-bold mb-4">YouTube Views Prediction</h3>
+          <p class="text-gray-600">Machine learning project predicting video view counts 
+            using XGBoost & Random Forest.</p>
+          <a href="https://github.com/yourusername/crop-deficiency-detector" target="_blank"
+            class="inline-block bg-gray-800 text-white mt-10 
+            md:px-8 md:py-4 px-6 py-2
+            text-xl rounded-lg hover:bg-gray-600 transition">
+            View on GitHub
+          </a>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="w-full flex-shrink-0 p-8 bg-white text-center">
+          <h3 class="text-2xl font-bold mb-4">UnemployedCSStudents — Career Platform</h3>
+          <p class="text-gray-600">A Next.js website with resume builder, forums, and job board for 
+            CS students.</p>
+          <a href="https://github.com/yourusername/crop-deficiency-detector" target="_blank"
+            class="inline-block bg-gray-800 text-white mt-10 
+            md:px-8 md:py-4 px-6 py-2
+            text-xl rounded-lg hover:bg-gray-600 transition">
+            View on GitHub
+          </a>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="w-full flex-shrink-0 p-8 bg-white text-center">
+          <h3 class="text-2xl font-bold mb-4">Asphatl 9 Regends</h3>
+          <p class="text-gray-600">A Next.js website with resume builder, forums, and job board for 
+            CS students.</p>
+          <a href="https://github.com/yourusername/crop-deficiency-detector" target="_blank"
+            class="inline-block bg-gray-800 text-white mt-10 
+            md:px-8 md:py-4 px-6 py-2
+            text-xl rounded-lg hover:bg-gray-600 transition">
+            View on GitHub
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Buttons -->
+    <button id="prev" class="absolute top-1/2 left-0 -translate-y-1/2 bg-gray-800 text-white px-3 py-2 rounded-r hover:bg-gray-600">❮</button>
+    <button id="next" class="absolute top-1/2 right-0 -translate-y-1/2 bg-gray-800 text-white px-3 py-2 rounded-l hover:bg-gray-600">❯</button>
+    
+    <!-- Pagination -->
+    <div id="dots" class="flex justify-center mt-6 space-x-2"></div>
+
+  </div>
+</main>
+
+  <footer class="bg-gray-900 text-white text-center py-4">
+    <p>Osel Citta Chen — Computer Science</p>
   </footer>
 
   <script src="script.js"></script>

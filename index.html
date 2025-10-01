@@ -6,62 +6,59 @@
   <title>Home</title>
 
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="index_style.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<header class="bg-gray-900 border-b-4 border-red-700">
-  <div class="max-w-6xl mx-auto pl-2 flex items-center justify-between h-16">
-    <h1 class="text-2xl font-bold tracking-widest text-white">Portfolio</h1>
+<header class="header-custom">
+  <div class="header-container">
+    <h1 class="header-title">Portfolio</h1>
 
     <!-- desktop nav -->
-    <nav class="hidden md:flex space-x-8 text-white">
-      <a href="index.html" class="hover:text-red-400">Home</a>
-      <a href="about.html" class="hover:text-red-400">About</a>
-      <a href="projects.html" class="hover:text-red-400">Projects</a>
-      <a href="resume.html" class="hover:text-red-400">Resume</a>
-      <a href="contact.html" class="hover:text-red-400">Contact</a>
+    <nav class="desktop-nav">
+      <a href="index.html" class="nav-link-custom nav-link-active">Home</a>
+      <a href="about.html" class="nav-link-custom">About</a>
+      <a href="projects.html" class="nav-link-custom">Projects</a>
+      <a href="resume.html" class="nav-link-custom">Resume</a>
+      <a href="contact.html" class="nav-link-custom">Contact</a>
     </nav>
 
-        <!-- Hamburger (mobile only) -->
-        <button id="menu-btn" class="md:hidden text-white text-2xl" aria-label="Toggle menu">☰</button>
-      </div>
+    <!-- Hamburger (mobile only) -->
+    <button id="menu-btn" class="menu-btn-custom" aria-label="Toggle menu">☰</button>
+  </div>
 
-      <!-- Mobile Nav -->
-      <div id="mobile-menu" class="hidden md:hidden bg-gray-800">
-        <ul class="flex flex-col space-y-2 px-6 py-4 text-white">
-          <li><a href="index.html" class="hover:text-red-400">Home</a></li>
-          <li><a href="about.html" class="hover:text-red-400">About</a></li>
-          <li><a href="projects.html" class="hover:text-red-400">Projects</a></li>
-          <li><a href="resume.html" class="hover:text-red-400">Resume</a></li>
-          <li><a href="contact.html" class="hover:text-red-400">Contact</a></li>
-        </ul>
-      </div>
-    </div>
+  <!-- Mobile Nav -->
+  <div id="mobile-menu" class="mobile-menu-custom">
+    <ul class="mobile-menu-list">
+      <li><a href="index.html" class="mobile-menu-link-custom">Home</a></li>
+      <li><a href="about.html" class="mobile-menu-link-custom">About</a></li>
+      <li><a href="projects.html" class="mobile-menu-link-custom">Projects</a></li>
+      <li><a href="resume.html" class="mobile-menu-link-custom">Resume</a></li>
+      <li><a href="contact.html" class="mobile-menu-link-custom">Contact</a></li>
+    </ul>
+  </div>
 </header>
 
-  <!-- Main -->
-  <main>
-  <section class="w-full h-screen bg-cover bg-center flex flex-col justify-center text-white"
-    style="background-image: url('images/japanese_background1.jpg');">
-  <div class="bg-black bg-opacity-40 w-full h-3/5 flex flex-col items-center justify-center text-center">
-    <h1 class="text-4xl md:text-6xl font-extrabold">Hi, I’m Osel Citta Chen</h1>
-    <p class="mt-4 text-lg md:text-xl">Creative Developer | Problem Solver | Innovator</p>
-    <a id="project-btn" href="projects.html" 
-    class="mt-6 bg-red-600 text-white-600 text-lg px-8 py-5 rounded-lg shadow hover:bg-white hover:text-red-600 transition">
-      See My Projects
-    </a>
-  </div>
-</section>
+<!-- Main -->
+<main>
+  <section class="hero-section-custom" style="background-image: url('images/japanese_background1.jpg');">
+    <div class="hero-overlay-custom">
+      <h1 class="hero-title-custom">Hi, I’m Osel Citta Chen</h1>
+      <p class="hero-desc-custom">Creative Developer | Problem Solver | Innovator</p>
+      <a id="project-btn" href="projects.html" class="project-btn-custom">
+        See My Projects
+      </a>
+    </div>
+  </section>
 </main>
 
+<!-- Footer -->
+<footer class="footer-custom">
+  <p>Osel Citta Chen — Computer Science</p>
+</footer>
 
-  <!-- Footer -->
-  <footer class="bg-gray-900 text-white text-center py-4">
-    <p>Osel Citta Chen — Computer Science</p>
-  </footer>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
 

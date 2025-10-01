@@ -3,122 +3,82 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio - Projects</title>
+  <title>My Projects</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="projects_style.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<header class="bg-gray-900 border-b-4 border-red-700">
-  <div class="max-w-6xl mx-auto pl-2 flex items-center justify-between h-16">
-    <h1 class="text-2xl font-bold tracking-widest text-white">Portfolio</h1>
-
-    <!-- desktop nav -->
-    <nav class="hidden md:flex space-x-8 text-white">
-      <a href="index.html" class="hover:text-red-400">Home</a>
-      <a href="about.html" class="hover:text-red-400">About</a>
-      <a href="projects.html" class="hover:text-red-400">Projects</a>
-      <a href="resume.html" class="hover:text-red-400">Resume</a>
-      <a href="contact.html" class="hover:text-red-400">Contact</a>
+<header class="header-custom">
+  <div class="header-inner">
+    <h1 class="header-title">Portfolio</h1>
+    <nav class="desktop-nav">
+      <a href="index.html" class="nav-link-custom">Home</a>
+      <a href="about.html" class="nav-link-custom">About</a>
+      <a href="projects.html" class="nav-link-custom nav-link-active">Projects</a>
+      <a href="resume.html" class="nav-link-custom">Resume</a>
+      <a href="contact.html" class="nav-link-custom">Contact</a>
     </nav>
-
-        <!-- Hamburger (mobile only) -->
-        <button id="menu-btn" class="md:hidden text-white text-2xl" aria-label="Toggle menu">☰</button>
-      </div>
-
-      <!-- Mobile Nav -->
-      <div id="mobile-menu" class="hidden md:hidden bg-gray-800">
-        <ul class="flex flex-col space-y-2 px-6 py-4 text-white">
-          <li><a href="index.html" class="hover:text-red-400">Home</a></li>
-          <li><a href="about.html" class="hover:text-red-400">About</a></li>
-          <li><a href="projects.html" class="hover:text-red-400">Projects</a></li>
-          <li><a href="resume.html" class="hover:text-red-400">Resume</a></li>
-          <li><a href="contact.html" class="hover:text-red-400">Contact</a></li>
-        </ul>
-      </div>
-    </div>
+    <button id="menu-btn" class="menu-btn-custom" aria-label="Toggle menu">☰</button>
+  </div>
+  <div id="mobile-menu" class="mobile-menu-custom">
+    <ul class="mobile-menu-list">
+      <li><a href="index.html" class="mobile-menu-link-custom">Home</a></li>
+      <li><a href="about.html" class="mobile-menu-link-custom">About</a></li>
+      <li><a href="projects.html" class="mobile-menu-link-custom">Projects</a></li>
+      <li><a href="resume.html" class="mobile-menu-link-custom">Resume</a></li>
+      <li><a href="contact.html" class="mobile-menu-link-custom">Contact</a></li>
+    </ul>
+  </div>
 </header>
 
-
-<main class="py-12 bg-gray-300">
-  <h2 class="text-4xl font-bold text-center mb-8">My Projects</h2>
-
-  <!-- Carousel container -->
-  <div class="relative max-w-4xl mx-auto">
-
-    <!-- Slides -->
-    <div class="overflow-hidden rounded-lg shadow-2xl">
-      <div id="carousel" class="flex transition-transform duration-500">
-        
-        <!-- Slide 1 -->
-        <div class="w-full flex-shrink-0 p-8 bg-white text-center">
-          <h3 class="text-2xl font-bold mb-4">AI-Powered Crop Deficiency Detector</h3>
-          <!-- <img src="images/Asgore.jpg" alt="Crop Detector" class="mx-auto mb-2 w-42 h-32"> -->
-          <p class="text-gray-600">A CNN model that identifies crop nutrient deficiencies from leaf images.</p>
-          <a href="https://github.com/yourusername/crop-deficiency-detector" target="_blank"
-            class="inline-block bg-gray-800 text-white mt-10 
-            md:px-8 md:py-4 px-6 py-2
-            text-xl rounded-lg hover:bg-gray-600 transition">
-            View on GitHub
-          </a>
+<main>
+  <section class="projects-section-bg">
+    <h2 class="projects-title">My Projects</h2>
+    <div class="carousel-container">
+      <div class="carousel-viewport">
+        <div id="carousel" class="carousel-track">
+          <div class="carousel-slide">
+            <div class="project-card">
+              <div class="project-info">
+                <h3 class="project-title">Project One</h3>
+                <p class="project-desc">A brief description of Project One. This project showcases my skills in React and Node.js.</p>
+                <a href="#" class="project-link" target="_blank">View Github</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <div class="project-card">
+              <div class="project-info">
+                <h3 class="project-title">Project Two</h3>
+                <p class="project-desc">A brief description of Project Two. This project demonstrates my experience with Python and AI.</p>
+                <a href="#" class="project-link" target="_blank">View Project</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <div class="project-card">
+              <div class="project-info">
+                <h3 class="project-title">Project Three</h3>
+                <p class="project-desc">A brief description of Project Three. This project highlights my UI/UX and frontend skills.</p>
+                <a href="#" class="project-link" target="_blank">View Project</a>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <!-- Slide 2 -->
-        <div class="w-full flex-shrink-0 p-8 bg-white text-center">
-          <h3 class="text-2xl font-bold mb-4">YouTube Views Prediction</h3>
-          <p class="text-gray-600">Machine learning project predicting video view counts 
-            using XGBoost & Random Forest.</p>
-          <a href="https://github.com/yourusername/crop-deficiency-detector" target="_blank"
-            class="inline-block bg-gray-800 text-white mt-10 
-            md:px-8 md:py-4 px-6 py-2
-            text-xl rounded-lg hover:bg-gray-600 transition">
-            View on GitHub
-          </a>
-        </div>
-
-        <!-- Slide 3 -->
-        <div class="w-full flex-shrink-0 p-8 bg-white text-center">
-          <h3 class="text-2xl font-bold mb-4">UnemployedCSStudents — Career Platform</h3>
-          <p class="text-gray-600">A Next.js website with resume builder, forums, and job board for 
-            CS students.</p>
-          <a href="https://github.com/yourusername/crop-deficiency-detector" target="_blank"
-            class="inline-block bg-gray-800 text-white mt-10 
-            md:px-8 md:py-4 px-6 py-2
-            text-xl rounded-lg hover:bg-gray-600 transition">
-            View on GitHub
-          </a>
-        </div>
-
-        <!-- Slide 4 -->
-        <div class="w-full flex-shrink-0 p-8 bg-white text-center">
-          <h3 class="text-2xl font-bold mb-4">Asphatl 9 Regends</h3>
-          <p class="text-gray-600">A Next.js website with resume builder, forums, and job board for 
-            CS students.</p>
-          <a href="https://github.com/yourusername/crop-deficiency-detector" target="_blank"
-            class="inline-block bg-gray-800 text-white mt-10 
-            md:px-8 md:py-4 px-6 py-2
-            text-xl rounded-lg hover:bg-gray-600 transition">
-            View on GitHub
-          </a>
-        </div>
-
       </div>
+      <button id="prev" class="carousel-btn carousel-btn-left" aria-label="Previous">&#10094;</button>
+      <button id="next" class="carousel-btn carousel-btn-right" aria-label="Next">&#10095;</button>
+      <div id="dots" class="carousel-dots"></div>
     </div>
-
-    <!-- Buttons -->
-    <button id="prev" class="absolute top-1/2 left-0 -translate-y-1/2 bg-gray-800 text-white px-3 py-2 rounded-r hover:bg-gray-600">❮</button>
-    <button id="next" class="absolute top-1/2 right-0 -translate-y-1/2 bg-gray-800 text-white px-3 py-2 rounded-l hover:bg-gray-600">❯</button>
-    
-    <!-- Pagination -->
-    <div id="dots" class="flex justify-center mt-6 space-x-2"></div>
-
-  </div>
+  </section>
 </main>
 
-  <footer class="bg-gray-900 text-white text-center py-4">
-    <p>Osel Citta Chen — Computer Science</p>
-  </footer>
+<footer class="footer-custom">
+  <p>Osel Citta Chen — Computer Science</p>
+</footer>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

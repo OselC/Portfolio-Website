@@ -5,18 +5,63 @@
   font-style: normal;
 }
 
-body {
-  font-family: 'Pixelfont', monospace;
-  margin: 0;
-  background: #f8fafc;
-  color: #0f172a;
-}
+/* Header */
 header {
   background: #ffffff;
   padding: 1rem;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   position: sticky;
   top: 0;
+}
+
+.header-container {
+  max-width: 72rem; /* max-w-6xl */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.5rem; /* pl-2 */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4rem; /* h-16 */
+}
+
+.header-custom {
+  background-color: #1a202c;
+  border-bottom: 4px solid #b91c1c;
+}
+.header-inner {
+  max-width: 72rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4rem;
+}
+.header-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+
+.desktop-nav {
+  display: none;
+}
+@media (min-width: 768px) {
+  .desktop-nav {
+    display: flex;
+    gap: 2rem;
+    color: #fff;
+  }
+}
+
+body {
+  font-family: 'Pixelfont', monospace;
+  margin: 0;
+  background: #f8fafc;
+  color: #0f172a;
 }
 
 nav a {
@@ -48,18 +93,65 @@ footer {
   text-decoration: none;
 }
 
-/* Mobile nav */
 nav {
   display: flex;
   gap: 1rem;
+}
+
+.nav-link-custom {
+  color: #fff;
+  transition: color 0.2s;
+  font-family: inherit;
+  font-weight: normal;
+}
+
+.nav-link-custom:hover {
+  color: #f87171;
+}
+
+.nav-link-active {
+  color: #ed2f2f;
+  font-weight: 600;
 }
 
 #menu-btn {
   display: none; /* hide on desktop */
 }
 
-#project-btn{
-    margin-top: 40px;
+.menu-btn-custom{
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  .menu-btn-custom {
+    display: none;
+  }
+}
+
+/* Mobile Nav */
+.mobile-menu-custom {
+  display: none;
+  background-color: #1f2937; /* bg-gray-800 */
+}
+@media (max-width: 767px) {
+  .mobile-menu-custom.active {
+    display: block;
+  }
+}
+.mobile-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem 1.5rem;
+  color: #fff;
+}
+
+.mobile-menu-link-custom {
+  color: #fff;
+  transition: color 0.2s;
+}
+.mobile-menu-link-custom:hover {
+  color: #f87171;
 }
 
 @media (max-width: 768px) {
@@ -86,4 +178,12 @@ nav {
     border: none;
     cursor: pointer;
   }
+}
+
+/* Footer */
+.footer-custom {
+  background-color: #1a202c;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
 }

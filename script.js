@@ -24,77 +24,62 @@ navLinks.forEach(link => {
   }
 });
 
+// Carousel functionality for projects.html
+document.addEventListener('DOMContentLoaded', function () {
+  const carousel = document.getElementById('carousel');
+  const slides = document.querySelectorAll('.carousel-slide');
+  const prevBtn = document.getElementById('prev');
+  const nextBtn = document.getElementById('next');
+  const dotsContainer = document.getElementById('dots');
+  if (!carousel || !slides.length || !prevBtn || !nextBtn || !dotsContainer) return;
 
-// Carousel
-    const carousel = document.getElementById("carousel");
-const slides = carousel.children.length;
-let index = 0;
+  let currentIndex = 0;
+  let autoSlideInterval;
 
-// Create dots dynamically
-const dotsContainer = document.getElementById("dots");
-const dots = [];
+  function updateCarousel() {
+    carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+    Array.from(dotsContainer.children).forEach((dot, idx) => {
+      dot.classList.toggle('active', idx === currentIndex);
+    });
+  }
 
-for (let i = 0; i < slides; i++) {
-  const dot = document.createElement("button");
-  dot.className =
-    "w-3 h-3 rounded-full bg-gray-400 hover:bg-red-500 transition";
-  if (i === 0) dot.classList.add("bg-red-600"); // highlight first dot
-  dot.addEventListener("click", () => {
-    index = i;
-    showSlide(index);
+  function goToSlide(idx) {
+    currentIndex = idx;
+    updateCarousel();
+    resetAutoSlide();
+  }
+
+  slides.forEach((_, idx) => {
+    const dot = document.createElement('button');
+    dot.addEventListener('click', () => goToSlide(idx));
+    if (idx === 0) dot.classList.add('active');
+    dotsContainer.appendChild(dot);
+  });
+
+  prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    updateCarousel();
     resetAutoSlide();
   });
-  dotsContainer.appendChild(dot);
-  dots.push(dot);
-}
-
-// Show slide function
-function showSlide(i) {
-  carousel.style.transform = `translateX(-${i * 100}%)`;
-  updateDots();
-}
-
-// Update dot colors
-function updateDots() {
-  dots.forEach((dot, i) => {
-    dot.classList.remove("bg-red-600");
-    dot.classList.add("bg-gray-400");
-    if (i === index) {
-      dot.classList.remove("bg-gray-400");
-      dot.classList.add("bg-red-600");
-    }
+  nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    updateCarousel();
+    resetAutoSlide();
   });
-}
 
-// Next & Prev
-function nextSlide() {
-  index = (index + 1) % slides;
-  showSlide(index);
-}
-function prevSlide() {
-  index = (index - 1 + slides) % slides;
-  showSlide(index);
-}
+  function autoSlide() {
+    currentIndex = (currentIndex + 1) % slides.length;
+    updateCarousel();
+  }
 
-// Buttons
-document.getElementById("next").addEventListener("click", () => {
-  nextSlide();
-  resetAutoSlide();
+  function resetAutoSlide() {
+    clearInterval(autoSlideInterval);
+    autoSlideInterval = setInterval(autoSlide, 4000);
+  }
+
+  updateCarousel();
+  autoSlideInterval = setInterval(autoSlide, 4000);
 });
-document.getElementById("prev").addEventListener("click", () => {
-  prevSlide();
-  resetAutoSlide();
-});
-
-// Auto-slide
-let autoSlide = setInterval(nextSlide, 5000);
-function resetAutoSlide() {
-  clearInterval(autoSlide);
-  autoSlide = setInterval(nextSlide, 5000);
-}
-
-// Init
-showSlide(index);
 
 
 

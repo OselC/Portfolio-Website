@@ -5,127 +5,90 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Me</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="about_style.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-<header class="bg-gray-900 border-b-4 border-red-700">
-  <div class="max-w-6xl mx-auto pl-2 flex items-center justify-between h-16">
-    <h1 class="text-2xl font-bold tracking-widest text-white">Portfolio</h1>
-
-    <!-- desktop nav -->
-    <nav class="hidden md:flex space-x-8 text-white">
-      <a href="index.html" class="hover:text-red-400">Home</a>
-      <a href="about.html" class="hover:text-red-400">About</a>
-      <a href="projects.html" class="hover:text-red-400">Projects</a>
-      <a href="resume.html" class="hover:text-red-400">Resume</a>
-      <a href="contact.html" class="hover:text-red-400">Contact</a>
+<header class="header-custom">
+  <div class="header-inner">
+    <h1 class="header-title">Portfolio</h1>
+    <nav class="desktop-nav">
+      <a href="index.html" class="nav-link-custom">Home</a>
+      <a href="about.html" class="nav-link-custom nav-link-active">About</a>
+      <a href="projects.html" class="nav-link-custom">Projects</a>
+      <a href="resume.html" class="nav-link-custom">Resume</a>
+      <a href="contact.html" class="nav-link-custom">Contact</a>
     </nav>
-
-        <!-- Hamburger (mobile only) -->
-        <button id="menu-btn" class="md:hidden text-white text-2xl" aria-label="Toggle menu">☰</button>
-      </div>
-
-      <!-- Mobile Nav -->
-      <div id="mobile-menu" class="hidden md:hidden bg-gray-800">
-        <ul class="flex flex-col space-y-2 px-6 py-4 text-white">
-          <li><a href="index.html" class="hover:text-red-400">Home</a></li>
-          <li><a href="about.html" class="hover:text-red-400">About</a></li>
-          <li><a href="projects.html" class="hover:text-red-400">Projects</a></li>
-          <li><a href="resume.html" class="hover:text-red-400">Resume</a></li>
-          <li><a href="contact.html" class="hover:text-red-400">Contact</a></li>
-        </ul>
-      </div>
-    </div>
+    <button id="menu-btn" class="menu-btn-custom" aria-label="Toggle menu">☰</button>
+  </div>
+  <div id="mobile-menu" class="mobile-menu-custom">
+    <ul class="mobile-menu-list">
+      <li><a href="index.html" class="mobile-menu-link-custom">Home</a></li>
+      <li><a href="about.html" class="mobile-menu-link-custom">About</a></li>
+      <li><a href="projects.html" class="mobile-menu-link-custom">Projects</a></li>
+      <li><a href="resume.html" class="mobile-menu-link-custom">Resume</a></li>
+      <li><a href="contact.html" class="mobile-menu-link-custom">Contact</a></li>
+    </ul>
+  </div>
 </header>
 
-  <main>
-    <section class="bg-gray-200 py-16 md:py-32">
-      <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-8">
-      <!-- About Me -->
-        <div class="flex-1 order-1 md:order-1">
-        <h2 class="text-4xl font-bold mb-4 mt-8">About Me</h2>
-        <p class="text-lg mb-4 text-justify">
+<main>
+  <section class="about-section-custom">
+    <div class="about-flex">
+      <div class="about-text">
+        <h2 class="about-title-custom">About Me</h2>
+        <p class="about-desc-custom">
           I’m a software engineer from Indonesia with experience in full-stack web development, 
           machine learning, and UI/UX driven product design. When I'm not coding, I usually enjoy hobbies 
-          like playing games and collecting trading cards.</p>
-        </div>
-
-      <!-- Profile Picture -->
-        <div class="flex-shrink-0 w-48 h-48 md:w-64 md:h-64 order-2 md:order-2 md:-mt-20 mb-10 md:mb-5">
-          <img src="images/profile.png" alt="profile picture">
-        </div>
-        </div>
-    </section>
-
-    <!-- Skills -->
-    <section class="bg-cover py-16" style="background-image: url('images/matrix-bg.jpg');">
-      <div class="max-w-6xl mx-auto px-6">
-        <h2 class="text-5xl text-white font-bold text-center mb-12 -mt-10">My Skills</h2>
-
-        <!-- Programming -->
-        <h3 class="text-3xl text-white font-bold text-center mb-2">Programming</h3>
-        <div class="flex flex-wrap justify-center gap-6 mb-10">
-          <div class="bg-white p-6 rounded-none shadow-md text-center w-40 border-2 border-black font-pixel">
-            <p class="font-semibold text-lg">C/C++</p>
-          </div>
-          <div class="bg-white p-6 rounded-none shadow-md text-center w-40 border-2 border-black font-pixel">
-            <p class="font-semibold text-lg">Python</p>
-          </div>
-          <div class="bg-white p-6 rounded-none shadow-md text-center w-40 border-2 border-black font-pixel">
-            <p class="font-semibold text-lg">Java</p>
-          </div>
-          <div class="bg-white p-6 rounded-none shadow-md text-center w-40 border-2 border-black font-pixel">
-            <p class="font-semibold text-lg">SQL</p>
-          </div>
-        </div>
-
-        <!-- Web Development -->
-        <h3 class="text-3xl text-white font-bold text-center mb-2">Web Development</h3>
-        <div class="flex flex-wrap justify-center gap-6 mb-10">
-          <div class="bg-white p-6 rounded-none shadow-md text-center w-40 border-2 border-black font-pixel">
-            <p class="font-semibold text-lg">HTML</p>
-          </div>
-          <div class="bg-white p-6 rounded-none shadow-md text-center w-40 border-2 border-black font-pixel">
-            <p class="font-semibold text-lg">CSS</p>
-          </div>
-          <div class="bg-white p-6 rounded-none shadow-md text-center w-40 border-2 border-black font-pixel">
-            <p class="font-semibold text-lg">Javascript</p>
-          </div>
-          <div class="bg-white p-6 rounded-none shadow-md text-center w-40 border-2 border-black font-pixel">
-            <p class="font-semibold text-lg">PHP</p>
-          </div>
-        </div>
-
-        <!-- Mobile App Development -->
-        <h3 class="text-3xl text-white font-bold text-center mb-2">Mobile App Development</h3>
-        <div class="flex flex-wrap justify-center gap-6 mb-10">
-          <div class="bg-white p-6 rounded-none shadow-md text-center w-40 border-2 border-black font-pixel">
-            <p class="font-semibold text-lg">React Native</p>
-          </div>
-        </div>
-
-        <!-- AI Programming -->
-        <h3 class="text-3xl text-white font-bold text-center mb-2">AI Programming</h3>
-        <div class="flex flex-wrap justify-center gap-6 -mb-6">
-          <div class="bg-white p-6 rounded-none shadow-md text-center w-40 border-2 border-black font-pixel">
-            <p class="font-semibold text-lg">Machine Learning</p>
-          </div>
-          <div class="bg-white p-6 rounded-none shadow-md text-center w-40 border-2 border-black font-pixel">
-            <p class="font-semibold text-lg">Deep Learning</p>
-          </div>
-        </div>
+          like playing games and collecting trading cards.
+        </p>
       </div>
-    </section>
+      <div class="about-profile-pic">
+        <img src="images/profile.png" alt="profile picture" class="profile-pic-custom" />
+      </div>
+    </div>
+  </section>
 
-  </main>
+  <section class="skills-section-bg">
+    <div class="skills-container">
+      <h2 class="skills-main-title">My Skills</h2>
 
-  <footer class="bg-gray-900 text-white text-center py-4">
-    <p>Osel Citta Chen — Computer Science</p>
-  </footer>
+      <h3 class="skills-category-title">Programming</h3>
+      <div class="skills-list-row">
+        <div class="skill-box"><p>C/C++</p></div>
+        <div class="skill-box"><p>Python</p></div>
+        <div class="skill-box"><p>Java</p></div>
+        <div class="skill-box"><p>SQL</p></div>
+      </div>
 
-  <script src="script.js"></script>
+      <h3 class="skills-category-title">Web Development</h3>
+      <div class="skills-list-row">
+        <div class="skill-box"><p>HTML</p></div>
+        <div class="skill-box"><p>CSS</p></div>
+        <div class="skill-box"><p>Javascript</p></div>
+        <div class="skill-box"><p>PHP</p></div>
+      </div>
+
+      <h3 class="skills-category-title">Mobile App Development</h3>
+      <div class="skills-list-row">
+        <div class="skill-box"><p>React Native</p></div>
+      </div>
+
+      <h3 class="skills-category-title">AI Programming</h3>
+      <div class="skills-list-row last-row">
+        <div class="skill-box"><p>Machine Learning</p></div>
+        <div class="skill-box"><p>Deep Learning</p></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer-custom">
+  <p>Osel Citta Chen — Computer Science</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>

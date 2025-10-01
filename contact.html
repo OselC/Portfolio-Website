@@ -38,52 +38,69 @@
     Fill out the form below and I’ll get back to you as soon as possible.
   </p>
 
-  <!-- Contact Form -->
-  <form id="contact-form" action="https://formspree.io/f/xgvnkjvr" method="POST"
-        class="contact-form">
+  <div class="contact-container">
+    <!-- Left: Contact Form -->
+    <form id="contact-form" action="https://formspree.io/f/xgvnkjvr" method="POST"
+          class="contact-form">
 
-    <!-- Full Name -->
-    <div class="form-group">
-      <label for="name" class="form-label">Full Name</label>
-      <input type="text" id="name" name="name" required class="form-input">
+      <!-- Full Name -->
+      <div class="form-group">
+        <label for="name" class="form-label">Full Name</label>
+        <input type="text" id="name" name="name" required class="form-input">
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" id="email" name="email" required class="form-input">
+      </div>
+
+      <!-- Phone -->
+      <div class="form-group">
+        <label for="phone" class="form-label">Phone Number</label>
+        <input type="number" id="phone" name="phone" required class="form-input">
+      </div>
+
+      <!-- Subject -->
+      <div class="form-group">
+        <label for="subject" class="form-label">Subject</label>
+        <input type="text" id="subject" name="subject" required class="form-input">
+      </div>
+
+      <!-- Message -->
+      <div class="form-group">
+        <label for="message" class="form-label">Message</label>
+        <textarea id="message" name="message" rows="8" required class="form-textarea"></textarea>
+      </div>
+
+      <!-- Submit -->
+      <div class="form-submit">
+        <button type="submit" class="contact-btn">
+          Submit
+        </button>
+      </div>
+    </form>
+
+    <!-- Right: Contact Info -->
+    <div class="contact-info">
+      <h3>Get in Touch</h3>
+      <p>📞 <strong>Phone:</strong> +62 812-3456-7890</p>
+      <p>📧 <strong>Email:</strong> your@email.com</p>
+      <p>💼 <strong>LinkedIn:</strong> 
+        <a href="https://www.linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a>
+      </p>
+      <p>👨‍💻 <strong>GitHub:</strong> 
+        <a href="https://github.com/yourgithub" target="_blank">github.com/yourgithub</a>
+      </p>
+
+      <!-- Social Media Icons -->
+      <div class="social-icons">
+        <a href="https://linkedin.com/in/yourprofile" target="_blank">🔗</a>
+        <a href="https://github.com/yourgithub" target="_blank">🐙</a>
+        <a href="https://twitter.com/yourtwitter" target="_blank">🐦</a>
+        <a href="https://instagram.com/yourinstagram" target="_blank">📸</a>
+      </div>
     </div>
-
-    <!-- Email -->
-    <div class="form-group">
-      <label for="email" class="form-label">Email</label>
-      <input type="email" id="email" name="email" required class="form-input">
-    </div>
-
-    <!-- Phone -->
-    <div class="form-group">
-      <label for="phone" class="form-label">Phone Number</label>
-      <input type="number" id="phone" name="phone" required class="form-input">
-    </div>
-
-    <!-- Subject -->
-    <div class="form-group">
-      <label for="subject" class="form-label">Subject</label>
-      <input type="text" id="subject" name="subject" required class="form-input">
-    </div>
-
-    <!-- Message -->
-    <div class="form-group">
-      <label for="message" class="form-label">Message</label>
-      <textarea id="message" name="message" rows="8" required class="form-textarea"></textarea>
-    </div>
-
-    <!-- Submit -->
-    <div class="form-submit">
-      <button type="submit" class="contact-btn">
-        Submit
-      </button>
-    </div>
-  </form>
-
-  <!-- Success/Error Messages -->
-  <div id="form-messages" class="form-messages hidden">
-    <p id="success-message" class="success-message hidden">✅ Your message has been sent successfully!</p>
-    <p id="error-message" class="error-message hidden">❌ Oops! Something went wrong. Please try again.</p>
   </div>
 </main>
 

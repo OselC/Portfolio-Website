@@ -122,6 +122,10 @@ nav {
   color: #fff;
 }
 
+.hidden {
+  display: none !important;
+}
+
 @media (min-width: 768px) {
   .menu-btn-custom {
     display: none;

@@ -48,19 +48,9 @@
 .resume-view-btn:hover {
   background: #4b5563;
 }
-.resume-pdf-viewer {
-  width: 100%;
-  border: 2px solid #d1d5db;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
-  border-radius: 0.75rem;
-  overflow: hidden;
-  margin-bottom: 2rem;
-  height: 1200px;
-  background: #fff;
-}
-.resume-pdf-iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-  display: block;
+
+.pdf-display{
+  width: 80%;
+  height: 800px;
+  margin: 0 auto;
 }

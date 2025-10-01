@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contacts</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <link rel="stylesheet" href="contact_style.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -27,7 +28,7 @@
       <li><a href="about.html" class="mobile-menu-link-custom">About</a></li>
       <li><a href="projects.html" class="mobile-menu-link-custom">Projects</a></li>
       <li><a href="resume.html" class="mobile-menu-link-custom">Resume</a></li>
-      <li><a href="contact.html" class="mobile-menu-link-custom nav-link-active">Contact</a></li>
+      <li><a href="contact.html" class="mobile-menu-link-custom">Contact</a></li>
     </ul>
   </div>
 </header>
@@ -83,20 +84,31 @@
       <h3>My Contacts</h3>
       <p><strong>Phone:</strong> +62 812-3456-7890</p>
       <p><strong>Email:</strong> your@email.com</p>
-      <p><strong>LinkedIn:</strong> 
-        <a href="https://www.linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a>
-      </p>
-      <p><strong>GitHub:</strong> 
-        <a href="https://github.com/yourgithub" target="_blank">github.com/yourgithub</a>
-      </p>
+      <p><strong>Location:</strong> Jakarta, Indonesia</p>
 
       <!-- Social Media Icons -->
       <div class="social-icons">
-        <a href="https://linkedin.com/in/yourprofile" target="_blank">🔗</a>
-        <a href="https://github.com/yourgithub" target="_blank">🐙</a>
-        <a href="https://instagram.com/yourinstagram" target="_blank">📸</a>
+        <a href="https://github.com/yourgithub" target="_blank">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://github.com/yourgithub" target="_blank">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/yourgithub" target="_blank">
+          <i class="fa-brands fa-square-instagram"></i>
+        </a>
+        
       </div>
     </div>
+  </div>
+
+  <div id="form-messages" class="form-messages hidden">
+      <p id="success-message" class="success-message hidden">
+        Thank you! Your message has been sent successfully.
+      </p>
+      <p id="error-message" class="error-message hidden">
+        Oops! There was an issue submitting your form.
+      </p>
   </div>
 </main>
 

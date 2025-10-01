@@ -43,7 +43,7 @@
   font-weight: 600;
   font-size: 1.1rem;
   text-decoration: none;
-  transition: background 0.2s;
+  transition: 0.2s;
 }
 .resume-view-btn:hover {
   background: #4b5563;

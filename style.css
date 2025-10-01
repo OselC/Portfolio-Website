@@ -15,30 +15,20 @@ header {
 }
 
 .header-container {
-  max-width: 72rem; /* max-w-6xl */
+  max-width: 72rem;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 0.5rem; /* pl-2 */
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  height: 4rem; /* h-16 */
+  justify-content: space-between;    
+  height: 4rem;
 }
 
 .header-custom {
   background-color: #1a202c;
   border-bottom: 4px solid #b91c1c;
 }
-.header-inner {
-  max-width: 72rem;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 0.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 4rem;
-}
+
 .header-title {
   font-size: 1.5rem;
   font-weight: bold;
@@ -114,73 +104,56 @@ nav {
   font-weight: 600;
 }
 
-#menu-btn {
-  display: none; /* hide on desktop */
-}
-
-.menu-btn-custom{
-  color: #fff;
-}
-
-.hidden {
-  display: none !important;
-}
-
-@media (min-width: 768px) {
-  .menu-btn-custom {
-    display: none;
-  }
-}
-
-/* Mobile Nav */
+/* Mobile Nav*/
 .mobile-menu-custom {
   display: none;
-  background-color: #1f2937; /* bg-gray-800 */
+  background-color: #1f2937;
 }
-@media (max-width: 767px) {
-  .mobile-menu-custom.active {
-    display: block;
-  }
+
+.mobile-menu-custom.active {
+  display: block;
 }
+
 .mobile-menu-list {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  padding: 1rem 1.5rem;
-  color: #fff;
+  list-style: none;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem;             
 }
 
 .mobile-menu-link-custom {
   color: #fff;
+  text-decoration: none;
   transition: color 0.2s;
+  font-size: 16px;      /* consistent font size */
+  font-weight: 500;     /* same weight */
+  padding: 0.5rem 0;    /* vertical padding to match other pages */
 }
+
 .mobile-menu-link-custom:hover {
   color: #f87171;
 }
 
-@media (max-width: 768px) {
-  nav {
-    display: none;              /* hide links initially */
-    flex-direction: column;     /* vertical layout */
-    background: #ffffff;
-    position: absolute;
-    top: 60px;                  /* just below header */
-    left: 0;
-    right: 0;
-    padding: 1rem;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  }
+.mobile-menu-link-custom.nav-link-active {
+  color: #ed2f2f;       /* red for active page */
+  font-weight: 600;
+}
 
-  nav.open {
-    display: flex; /* show when toggled */
-  }
+#menu-btn {
+  display: inline-block;
+  font-size: 1.5rem;
+  background: none;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+}
 
+/* Hide hamburger on desktop */
+@media (min-width: 768px) {
   #menu-btn {
-    display: inline-block; /* show hamburger on mobile */
-    font-size: 1.5rem;
-    background: none;
-    border: none;
-    cursor: pointer;
+    display: none;
   }
 }
 

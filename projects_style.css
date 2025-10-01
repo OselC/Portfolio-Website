@@ -53,6 +53,8 @@
   margin: 0 auto;
   background: #ffffff;
   border-radius: 1rem;
+  border-width: 6px;
+  border-color: #1a202c;
   box-shadow: 0 2px 8px rgba(0,0,0,0.10);
   padding: 2rem 1.5rem;
   display: flex;

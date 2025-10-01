@@ -2,25 +2,23 @@ const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
 
     menuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
+      mobileMenu.classList.toggle('active');
     });
 
     // Hide mobile menu after clicking a link
     mobileMenu.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
+        mobileMenu.classList.remove('active');
       });
     });
 
-// Highlight active nav link (desktop + mobile)
-const currentPage = window.location.pathname.split("/").pop(); 
+// Highlight active link (desktop + mobile)
+const currentPage = window.location.pathname.split("/").pop();
+const allLinks = document.querySelectorAll(".desktop-nav a, .mobile-menu-link-custom");
 
-// Select both desktop and mobile nav links
-const navLinks = document.querySelectorAll("nav a, #mobile-menu a");
-
-navLinks.forEach(link => {
+allLinks.forEach(link => {
   if (link.getAttribute("href") === currentPage) {
-    link.classList.add("text-red-600", "font-bold");
+    link.classList.add("nav-link-active");
   }
 });
 
@@ -77,8 +75,8 @@ document.addEventListener('DOMContentLoaded', function () {
     autoSlideInterval = setInterval(autoSlide, 4000);
   }
 
-  updateCarousel();
-  autoSlideInterval = setInterval(autoSlide, 4000);
+    updateCarousel();
+    autoSlideInterval = setInterval(autoSlide, 4000);
 });
 
 

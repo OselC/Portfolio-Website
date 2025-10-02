@@ -23,22 +23,23 @@
   font-size: 2.25rem;
   font-weight: 800;
 }
+
 @media (min-width: 768px) {
   .hero-title-custom {
     font-size: 3.75rem;
   }
 }
 .hero-desc-custom {
-  margin-top: 1rem;
+  margin-top: 0.25rem;
   font-size: 1.125rem;
 }
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .hero-desc-custom {
     font-size: 1.25rem;
   }
 }
 .project-btn-custom {
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   background: #dc2626;
   color: #fff;
   font-size: 1.125rem;

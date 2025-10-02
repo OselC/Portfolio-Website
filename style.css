@@ -5,7 +5,6 @@
   font-style: normal;
 }
 
-/* Header */
 header {
   background: #ffffff;
   padding: 1rem;
@@ -105,7 +104,6 @@ nav {
   font-weight: 600;
 }
 
-/* Mobile Nav*/
 .mobile-menu-custom {
   display: none;
   background-color: #1f2937;
@@ -127,9 +125,9 @@ nav {
   color: #fff;
   text-decoration: none;
   transition: color 0.2s;
-  font-size: 16px;      /* consistent font size */
-  font-weight: 500;     /* same weight */
-  padding: 0.5rem 0;    /* vertical padding to match other pages */
+  font-size: 16px;      
+  font-weight: 500;     
+  padding: 0.5rem 0;
 }
 
 .mobile-menu-link-custom:hover {
@@ -137,7 +135,7 @@ nav {
 }
 
 .mobile-menu-link-custom.nav-link-active {
-  color: #ed2f2f;       /* red for active page */
+  color: #ed2f2f;
   font-weight: 600;
 }
 
@@ -151,7 +149,6 @@ nav {
   color: #fff;
 }
 
-/* Hide hamburger on desktop */
 @media (min-width: 768px) {
   #menu-btn {
     display: none;
@@ -161,7 +158,6 @@ nav {
   }
 }
 
-/* Footer */
 .footer-custom {
   background-color: #1a202c;
   color: #fff;

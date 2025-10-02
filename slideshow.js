@@ -1,4 +1,3 @@
-// Carousel functionality for projects.html
 document.addEventListener('DOMContentLoaded', function () {
   const carousel = document.getElementById('carousel');
   const slides = document.querySelectorAll('.carousel-slide');
